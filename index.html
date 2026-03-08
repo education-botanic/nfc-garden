@@ -1,24 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>גן בוטני</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>הגן הבוטני</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 9 / 16;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+      background: #111;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 15px;
+      color: #ddd;
+    }
+
+    @media (min-width: 700px) {
+      .video-wrapper {
+        max-width: 420px;
+      }
+    }
+  </style>
 </head>
+<body>
+  <div class="page">
+    <div class="title">ברוכים הבאים לגן הבוטני</div>
 
-<body style="text-align:center;font-family:Arial">
+    <div class="video-wrapper">
+      <iframe
+        src="https://player.vimeo.com/video/76979871"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-<h1>ברוכים הבאים לגן הבוטני</h1>
-
-<p>לחצו כדי לצפות בהסבר</p>
-
-<iframe 
-src="https://player.vimeo.com/video/76979871"
-width="640"
-height="360"
-frameborder="0"
-allow="autoplay; fullscreen"
-allowfullscreen>
-</iframe>
-
+    <div class="subtitle">צפו בסרטון ההסבר</div>
+  </div>
 </body>
 </html>
